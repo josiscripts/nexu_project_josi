@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --nexu-red: #FF3B3F;
+  --nexu-cyan: #2BD4DE;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #FFFFFF;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #0F1226;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+/* 44px tactile minimum target */
+.tap-44 { min-height: 44px; min-width: 44px; }
+
+/* Custom range slider track */
+input[type="range"].nexu-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #FF3B3F 0%, #FF3B3F var(--p,50%), #E7E9F0 var(--p,50%), #E7E9F0 100%);
+  border-radius: 999px;
+  outline: none;
+}
+input[type="range"].nexu-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 26px; width: 26px; border-radius: 50%;
+  background: #FFFFFF; border: 3px solid #FF3B3F;
+  box-shadow: 0 4px 10px rgba(255,59,63,0.35);
+  cursor: pointer;
+}
+input[type="range"].nexu-range::-moz-range-thumb {
+  height: 26px; width: 26px; border-radius: 50%;
+  background: #FFFFFF; border: 3px solid #FF3B3F;
+  box-shadow: 0 4px 10px rgba(255,59,63,0.35);
+  cursor: pointer;
+}
+
+/* Hide scrollbars in carousel */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
